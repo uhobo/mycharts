@@ -7,19 +7,16 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Entities",
-        "answerScale": "Answer Scale",
-        "surveyQuestion": "Survey Question",
-        "survey": "Survey",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {
-        "main": "Account",
-        "settings": "Settings",
-        "password": "Password",
-        "sessions": "Sessions",
-        "login": "Sign in",
-        "logout": "Sign out",
-        "register": "Register"
+        "main": "ראשי",
+        "settings": "הגדרות",
+        "password": "סיסמא",
+        "sessions": "התברויות",
+        "login": "התחברות",
+        "logout": "התנתקות",
+        "register": "רישום"
       },
       "admin": {
         "main": "Administration",
@@ -36,16 +33,16 @@
       "language": "Language"
     },
     "form": {
-      "username.label": "Username",
-      "username.placeholder": "Your username",
-      "currentpassword.label": "Current password",
-      "currentpassword.placeholder": "Current password",
-      "newpassword.label": "New password",
-      "newpassword.placeholder": "New password",
-      "confirmpassword.label": "New password confirmation",
-      "confirmpassword.placeholder": "Confirm the new password",
-      "email.label": "Email",
-      "email.placeholder": "Your email"
+      "username.label": "שם משתמש",
+      "username.placeholder": "שם משתמש",
+      "currentpassword.label": "סיסמא ישנה",
+      "currentpassword.placeholder": "סיסמא ישנה",
+      "newpassword.label": "סיסמא חדשה",
+      "newpassword.placeholder": "סיסמא חדשה",
+      "confirmpassword.label": "אשר סיסמה",
+      "confirmpassword.placeholder": "אשר סיסמה",
+      "email.label": "מייל",
+      "email.placeholder": "מייל"
     },
     "messages": {
       "info": {
@@ -75,8 +72,8 @@
           "maxlength": "Your confirmation password cannot be longer than 50 characters."
         },
         "email": {
-          "required": "Your email is required.",
-          "invalid": "Your email is invalid.",
+          "required": "מייל",
+          "invalid": "כתובת מייל לא תקינה",
           "minlength": "Your email is required to be at least 5 characters.",
           "maxlength": "Your email cannot be longer than 50 characters."
         }
@@ -94,13 +91,13 @@
     "action": {
       "addblob": "Add blob",
       "addimage": "Add image",
-      "back": "Back",
-      "cancel": "Cancel",
-      "delete": "Delete",
-      "edit": "Edit",
-      "open": "Open",
-      "save": "Save",
-      "view": "View"
+      "back": "חזור",
+      "cancel": "ביטול",
+      "delete": "מחיקה",
+      "edit": "עריכה",
+      "open": "פתיחה",
+      "save": "שמירה",
+      "view": "צפייה"
     },
     "detail": {
       "field": "Field",

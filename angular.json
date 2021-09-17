@@ -108,6 +108,7 @@
   },
   "defaultProject": "mycharts",
   "cli": {
+    "analytics": "29985449-e1dd-4869-9e13-715edbfb7c7d",
     "packageManager": "npm"
   }
 }

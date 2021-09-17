@@ -1,0 +1,42 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="answerScale">
+      <h2 data-cy="answerScaleDetailsHeading"><span jhiTranslate="mychartsApp.answerScale.detail.title">Answer Scale</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ answerScale.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="mychartsApp.answerScale.score">Score</span></dt>
+        <dd>
+          <span>{{ answerScale.score }}</span>
+        </dd>
+        <dt><span jhiTranslate="mychartsApp.answerScale.description">Description</span></dt>
+        <dd>
+          <span>{{ answerScale.description }}</span>
+        </dd>
+        <dt><span jhiTranslate="mychartsApp.answerScale.survey">Survey</span></dt>
+        <dd>
+          <div *ngIf="answerScale.survey">
+            <a [routerLink]="['/survey', answerScale.survey?.id, 'view']">{{ answerScale.survey?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/answer-scale', answerScale.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

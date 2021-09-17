@@ -1,0 +1,33 @@
+{
+  "name": "SurveyQuestion",
+  "fields": [
+    {
+      "fieldName": "questionId",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "survey",
+      "otherEntityRelationshipName": "questionList",
+      "relationshipName": "survey"
+    }
+  ],
+  "entityTableName": "survey_question",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210917061112"
+}

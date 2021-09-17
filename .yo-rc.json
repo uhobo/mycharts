@@ -42,6 +42,8 @@
     "clientThemeVariant": "",
     "languages": ["en"],
     "otherModules": [],
-    "enableGradleEnterprise": false
+    "enableGradleEnterprise": false,
+    "entities": ["Survey"],
+    "lastLiquibaseTimestamp": 1631859073000
   }
 }

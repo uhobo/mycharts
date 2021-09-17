@@ -1,0 +1,73 @@
+{
+  "mychartsApp": {
+    "survey": {
+      "home": {
+        "title": "Surveys",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Survey",
+        "createOrEditLabel": "Create or edit a Survey",
+        "notFound": "No Surveys found"
+      },
+      "created": "A new Survey is created with identifier {{ param }}",
+      "updated": "A Survey is updated with identifier {{ param }}",
+      "deleted": "A Survey is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Survey {{ id }}?"
+      },
+      "detail": {
+        "title": "Survey"
+      },
+      "id": "ID",
+      "title": "Title",
+      "description": "Description",
+      "scaleList": "Scale List",
+      "questionList": "Question List"
+    }
+  },
+  "answerScale": {
+      "home": {
+        "title": "Answer Scales",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Answer Scale",
+        "createOrEditLabel": "Create or edit a Answer Scale",
+        "notFound": "No Answer Scales found"
+      },
+      "created": "A new Answer Scale is created with identifier {{ param }}",
+      "updated": "A Answer Scale is updated with identifier {{ param }}",
+      "deleted": "A Answer Scale is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Answer Scale {{ id }}?"
+      },
+      "detail": {
+        "title": "Answer Scale"
+      },
+      "id": "ID",
+      "score": "Score",
+      "description": "Description",
+      "survey": "Survey"
+    },
+    "surveyQuestion": {
+      "home": {
+        "title": "Survey Questions",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Survey Question",
+        "createOrEditLabel": "Create or edit a Survey Question",
+        "notFound": "No Survey Questions found"
+      },
+      "created": "A new Survey Question is created with identifier {{ param }}",
+      "updated": "A Survey Question is updated with identifier {{ param }}",
+      "deleted": "A Survey Question is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Survey Question {{ id }}?"
+      },
+      "detail": {
+        "title": "Survey Question"
+      },
+      "id": "ID",
+      "questionId": "Question Id",
+      "description": "Description",
+      "survey": "Survey"
+    }
+  
+  
+}

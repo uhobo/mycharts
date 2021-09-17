@@ -1,0 +1,38 @@
+{
+  "name": "Survey",
+  "fields": [
+    {
+      "fieldName": "title",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "answerScale",
+      "otherEntityRelationshipName": "survey",
+      "relationshipName": "scaleList"
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "surveyQuestion",
+      "otherEntityRelationshipName": "survey",
+      "relationshipName": "questionList"
+    }
+  ],
+  "entityTableName": "survey",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210917061113"
+}

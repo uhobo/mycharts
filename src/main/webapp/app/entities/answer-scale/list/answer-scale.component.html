@@ -1,0 +1,86 @@
+<div>
+  <h2 id="page-heading" data-cy="AnswerScaleHeading">
+    <span jhiTranslate="mychartsApp.answerScale.home.title">Answer Scales</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info mr-2" (click)="loadAll()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="mychartsApp.answerScale.home.refreshListLabel">Refresh List</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-answer-scale"
+        [routerLink]="['/answer-scale/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="mychartsApp.answerScale.home.createLabel"> Create a new Answer Scale </span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="answerScales?.length === 0">
+    <span jhiTranslate="mychartsApp.answerScale.home.notFound">No answerScales found</span>
+  </div>
+
+  <div class="table-responsive" id="entities" *ngIf="answerScales && answerScales.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr>
+          <th scope="col"><span jhiTranslate="global.field.id">ID</span></th>
+          <th scope="col"><span jhiTranslate="mychartsApp.answerScale.score">Score</span></th>
+          <th scope="col"><span jhiTranslate="mychartsApp.answerScale.description">Description</span></th>
+          <th scope="col"><span jhiTranslate="mychartsApp.answerScale.survey">Survey</span></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let answerScale of answerScales; trackBy: trackId" data-cy="entityTable">
+          <td>
+            <a [routerLink]="['/answer-scale', answerScale.id, 'view']">{{ answerScale.id }}</a>
+          </td>
+          <td>{{ answerScale.score }}</td>
+          <td>{{ answerScale.description }}</td>
+          <td>
+            <div *ngIf="answerScale.survey">
+              <a [routerLink]="['/survey', answerScale.survey?.id, 'view']">{{ answerScale.survey?.id }}</a>
+            </div>
+          </td>
+          <td class="text-right">
+            <div class="btn-group">
+              <button
+                type="submit"
+                [routerLink]="['/answer-scale', answerScale.id, 'view']"
+                class="btn btn-info btn-sm"
+                data-cy="entityDetailsButton"
+              >
+                <fa-icon icon="eye"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+              </button>
+
+              <button
+                type="submit"
+                [routerLink]="['/answer-scale', answerScale.id, 'edit']"
+                class="btn btn-primary btn-sm"
+                data-cy="entityEditButton"
+              >
+                <fa-icon icon="pencil-alt"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+              </button>
+
+              <button type="submit" (click)="delete(answerScale)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                <fa-icon icon="times"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
